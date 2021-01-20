@@ -1,0 +1,100 @@
+URxvt.depth: 32
+URxvt.background: [80]#1f1a26
+
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: false
+URxvt*scrollBar: false
+URxvt.intensityStyles: false
+URxvt.font: xft:monospace:size=13, \
+	    xft:KawkabMono:size=12, \
+            xft:Twitter Emoji Color:size=12, \
+
+!! Extensions
+URxvt.perl-ext-common: default,url-select,clipboard
+URxvt.colorUL: #4682B4
+
+!!! url-select
+!URxvt.keysym.M-u: perl:url-select:select_next
+!URxvt.url-select.launcher: urxvt -e w3m
+!URxvt.url-select.underline: true
+
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+! special
+*.foreground:   #e1dce9
+*.background:   #1f1a26
+*.cursorColor:  #e1dce9
+
+! black
+*.color0:       #302d34
+*.color8:       #797484
+
+! red
+*.color1:       #bc325f
+*.color9:       #d24260
+
+! green
+*.color2:       #4eb368
+*.color10:      #78cd99
+
+! yellow
+*.color3:       #e5894b
+*.color11:      #f0a374
+
+! blue
+*.color4:       #357cd1
+*.color12:      #6896d7
+
+! magenta
+*.color5:       #9b5fcf
+*.color13:      #a86dca
+
+! cyan
+*.color6:       #3399ab
+*.color14:      #4fa8b1
+
+! white
+*.color7:       #d7c8f8
+*.color15:      #c2b5d6
+
+!!colorful colors
+!!
+!! special
+!*.foreground:   #e1e4e2
+!*.background:   #181819
+!*.cursorColor:  #e1e4e2
+!
+!! black
+!*.color0:       #2d2f34
+!*.color8:       #656a72
+!
+!! red
+!*.color1:       #c34454
+!*.color9:       #d3616f
+!
+!! green
+!*.color2:       #66b34e
+!*.color10:      #82bd68
+!
+!! yellow
+!*.color3:       #e5914b
+!*.color11:      #f0b374
+!
+!! blue
+!*.color4:       #3594d1
+!*.color12:      #68afd7
+!
+!! magenta
+!*.color5:       #9e65c3
+!*.color13:      #ad7cc9
+!
+!! cyan
+!*.color6:       #379a96
+!*.color14:      #4fb196
+!
+!! white
+!*.color7:       #9fb8d1
+!*.color15:      #bbcdc1

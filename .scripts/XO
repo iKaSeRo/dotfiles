@@ -1,0 +1,41 @@
+#!/bin/sh
+
+echo "Which multiplication table?"
+read mt
+
+result=$(echo "$mt * 1" | bc)
+echo "$mt x 1 = $result"
+
+result=$(echo "$mt * 2" | bc)
+echo "$mt x 2 = $result"
+
+result=$(echo "$mt * 3" | bc)
+echo "$mt x 3 = $result"
+
+result=$(echo "$mt * 4" | bc)
+echo "$mt x 4 = $result"
+
+result=$(echo "$mt * 5" | bc)
+echo "$mt x 5 = $result"
+
+result=$(echo "$mt * 6" | bc)
+echo "$mt x 6 = $result"
+
+result=$(echo "$mt * 7" | bc)
+echo "$mt x 7 = $result"
+
+result=$(echo "$mt * 8" | bc)
+echo "$mt x 8 = $result"
+
+result=$(echo "$mt * 9" | bc)
+echo "$mt x 9 = $result"
+
+result=$(echo "$mt * 10" | bc)
+echo "$mt x 10 = $result"
+
+result=$(echo "$mt * 11" | bc)
+echo "$mt x 11 = $result"
+
+result=$(echo "$mt * 12" | bc)
+echo "$mt x 12 = $result"
+

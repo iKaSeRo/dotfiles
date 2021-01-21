@@ -79,7 +79,7 @@ _comp_options+=(globdots)               # Include hidden files.
 bindkey '^ ' autosuggest-accept
 
 # Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
+[ -f "$HOME/.config/shell/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliasrc"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

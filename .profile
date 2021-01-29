@@ -1,11 +1,11 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Add directory to $PATH
 export PATH="$PATH:$(du "$HOME/.scripts" | cut -f2 | paste -sd ':' -)"
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-unsetopt PROMPT_SP
+#unsetopt PROMPT_SP
 
 # Default programs:
 export EDITOR="nvim"

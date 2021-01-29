@@ -14,17 +14,20 @@ alias shred='shred -v'
 alias ls='ls -lhN --color=auto --group-directories-first'
 alias la='ls -A'
 
-#alias sudo="doas"
+alias sudo="doas"
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias myip='curl ipinfo.io/ip'
 alias sha='shasum -a 256'
 alias sdn='sudo shutdown -P now'
-alias ytv='straw-viewer'
+alias xq='xbps-query -Rs'
+alias xi='doas xbps-install'
+alias xr='doas xbps-remove -R'
 
 #youtube-dl aliases
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
+alias ytv='straw-viewer'
 
 alias fish='asciiquarium'

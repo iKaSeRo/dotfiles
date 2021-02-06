@@ -1,0 +1,38 @@
+#!/bin/sh
+
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+alias ka='killall'
+#alias ls='exa -l --color=always --group-directories-first' # my preferred listing
+#alias la='exa -la --color=always --group-directories-first'  # all files and dirs
+#alias lt='exa -aT --color=always --group-directories-first' # tree listing
+#alias l.='exa -a | egrep "^\."'
+
+# Verbose aliases
+alias mv='mv -v'
+alias cp='cp -v'
+alias rm='rm -v'
+alias shred='shred -v'
+alias ls='ls -lhN --color=auto --group-directories-first'
+alias la='ls -A'
+
+#alias sudo="doas"
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias myip='curl ipinfo.io/ip'
+alias sha='shasum -a 256'
+alias sdn='sudo shutdown -P now'
+alias xq='xbps-query -Rs'
+alias xi='doas xbps-install'
+alias xr='doas xbps-remove -R'
+
+# Git bare repo alias
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+#youtube-dl aliases
+alias yt='youtube-dl --add-metadata -i'
+alias yta='yt -x -f bestaudio/best'
+alias ytv='straw-viewer'
+
+alias fish='asciiquarium'

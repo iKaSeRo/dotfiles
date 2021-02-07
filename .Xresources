@@ -1,5 +1,5 @@
 URxvt.depth: 32
-URxvt.background: [90]#1f1a26
+#URxvt.background: [95]#1f1a26
 
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
@@ -18,12 +18,12 @@ URxvt.colorUL: #4682B4
 !URxvt.keysym.M-u: perl:url-select:select_next
 !URxvt.url-select.launcher: urxvt -e w3m
 
-URxvt.bidi.LRE: \\\\[([]
-URxvt.bidi.PDF: \\\\[)\\]]
-urxvt-vimh.bidi.par: true
-urxvt-vimh.cursorUnderline: true
-urxvt-vimh.bidi.ParReset: ^\\s*$|^\\\\begin|^\\\\\\[
-urxvt-vimh.bidi.ParResetAfter: ^\\\\end|\\\\\\]$!URxvt.url-select.underline: true
+#URxvt.bidi.LRE: \\\\[([]
+#URxvt.bidi.PDF: \\\\[)\\]]
+#urxvt-vimh.bidi.par: true
+#urxvt-vimh.cursorUnderline: true
+#urxvt-vimh.bidi.ParReset: ^\\s*$|^\\\\begin|^\\\\\\[
+#urxvt-vimh.bidi.ParResetAfter: ^\\\\end|\\\\\\]$!URxvt.url-select.underline: true
 
 URxvt.bidi.enabled: 1
 
@@ -33,7 +33,7 @@ URxvt.keysym.M-v: perl:clipboard:paste
 
 ! special
 *.foreground:   #e1dce9
-*.background:   #1f1a26
+*.background:   #1c1826
 *.cursorColor:  #e1dce9
 
 ! black

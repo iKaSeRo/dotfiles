@@ -1,0 +1,6 @@
+#!/bin/sh
+
+choice=$(sxiv -t -r -q -o $HOME/pictures/Wallpaper/Anime)
+cp ""$choice"" $HOME/.config/wallpaper.jpg
+xwallpaper --zoom $HOME/.config/wallpaper.jpg
+notify-send -i $HOME/.config/wallpaper.jpg "Is your new wallpaper!" && exit

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo 'what is 1 + 1'
+read awnser
+
+if [ $awnser -eq 2 ]; then
+
+	echo "$USER IS SMAAAAART"
+else
+	echo "$USER IS THE DUMBEST HUMAN ON EARTH"
+
+fi

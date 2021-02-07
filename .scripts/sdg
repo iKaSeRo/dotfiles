@@ -1,0 +1,45 @@
+#!/bin/sh
+
+cacheFile="$HOME/.local/share/sdg"
+currentDate=$(date +"%d/%m/%Y %I:%M %p")
+
+currencyChoice="${2:-u}"
+amount="${1:-1}"
+
+if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+	echo "Internet connection is up"
+	dailyBank=$(w3m "https://www.un-web.com/tools/currency/\?p=SDG" | grep -o "1 USD = SDG\s\S*" | cut -d' ' -f5)
+	dailyBM=$(w3m "https://www.price-today.com/currency-prices-sudan/" | grep "الامريكي" | cut -d' ' -f2)
+	internetCon=true
+else
+	lastDate=$(tail -n 1 "$cacheFile" | cut -f1)
+	dailyBank=$(tail -n 1 "$cacheFile" | cut -f2)
+	dailyBM=$(tail -n 1 "$cacheFile" | cut -f3)
+	internetCon=false
+
+	echo "There's no internet connection"
+	echo "Checking cache file for the last cached price..."
+	[ -s "$cacheFile" ] && echo "There is a cached price... from date $lastDate"
+	[ ! -e "$cacheFile" ] && echo "There is no Internet Connection or cached price... exiting..." && exit 1
+
+fi
+
+#echo "Calculate From [U]SD or [S]DG?" && read -r choice
+
+calculate()
+{
+	#echo "What's the ammount in USD" && read -r amount
+	bank=$(echo "scale=2;$amount $1 $dailyBank" | bc -l)
+	blackMarket=$(echo "scale=2;$amount $1 $dailyBM" | bc -l)
+	echo "$amount $2 Is $bank $3 in bank"
+	echo "$amount $2 Is $blackMarket $3 in The Black Market"
+
+	[ -s "$cacheFile" ] && [ "$internetCon" ] && echo "$currentDate	$dailyBank	$dailyBM" >> "$cacheFile"
+	[ ! -e "$cacheFile" ] && [ "$internetCon" ] && echo "Time	Bank	Market" > "$cacheFile" && echo "$currentDate	$dailyBank	$dailyBM" >> "$cacheFile"
+}
+
+case $currencyChoice in
+	[uU][sS][dD] | [uU]) calculate "*" "USD" "SDG" ;;
+	[sS][dD][gG] | [sS]) calculate "/" "SDG" "USD" ;;
+	*) echo "Invalid input please type either USD or SDG" ;;
+esac

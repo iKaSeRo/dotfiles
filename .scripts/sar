@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "From USD Or SAR?"
+read -r choice
+
+if [ $choice = usd ] || [ $choice = u ]; then
+	echo "What's the ammount in USD"
+	read -r usd
+	result=$(echo "scale=2;$usd * 3.75" | bc -l)
+	echo -e "$usd Is\033[33m $result SAR"
+	notify-send "$usd USD Is $result SAR"
+	sleep 5
+elif [ $choice = sar ] || [ $choice = s ]; then
+	echo "What's the ammount in SAR"
+	read -r sar
+	result=$(echo "scale=2;$sar / 3.75" | bc -l)
+	echo -e "$sar Is\033[33m $result USD"
+	notify-send "$sar SAR Is $result USD"
+	sleep 5
+fi
+

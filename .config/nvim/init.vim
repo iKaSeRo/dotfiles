@@ -1,12 +1,12 @@
 let mapleader =" "
 
-call plug#begin('.local/share/nvim/plugged')
-
-Plug 'jamessan/vim-gnupg'
-Plug 'vimwiki/vimwiki'
-Plug 'ap/vim-css-color'
-
-call plug#end()
+" call plug#begin('.local/share/nvim/plugged')
+" 
+" Plug 'jamessan/vim-gnupg'
+" Plug 'vimwiki/vimwiki'
+" Plug 'ap/vim-css-color'
+" 
+" call plug#end()
 
 " Auto regenerate diary index
 let g:vimwiki_list = [{'auto_diary_index': 1}]

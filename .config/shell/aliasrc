@@ -28,7 +28,7 @@ alias xi='doas xbps-install'
 alias xr='doas xbps-remove -R'
 
 # Git bare repo alias
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 #youtube-dl aliases
 alias yt='youtube-dl --add-metadata -i'

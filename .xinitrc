@@ -1,5 +1,5 @@
 exec dwm &
-exec slstatus &
+#exec slstatus &
 #exec dwmblocks &
 #xsetroot -cursor_name left_ptr
 #flameshot &
@@ -18,4 +18,4 @@ $HOME/.scripts/remap &
 exec xcompmgr
 
 # Fix screen tearing
-nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+#nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"

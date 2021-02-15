@@ -1,13 +1,13 @@
 exec dwm &
-#exec slstatus &
+exec slstatus &
 #exec dwmblocks &
 #xsetroot -cursor_name left_ptr
 #flameshot &
 xwallpaper --zoom ~/.config/wallpaper.jpg 
 xrdb ~/.Xresources
-xrandr -s 1920x1080 -r 75
+#xrandr -s 1920x1080 -r 75
 #dunst &
-mpd &
+#mpd &
 
 $HOME/.scripts/remap &
 

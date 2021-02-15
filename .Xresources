@@ -1,12 +1,12 @@
 URxvt.depth: 32
-!URxvt.background: [95]#1f1a26
+URxvt.background: [90]#1f1a26
 
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
 URxvt*buffered: false
 URxvt*scrollBar: false
 URxvt.intensityStyles: false
-URxvt.font: xft:Hack:size=14,
+URxvt.font: xft:Inconsolata:size=15,
 !	xft:Amiri:size=12,
 !xft:Twitter Emoji Color:size=12, \
 

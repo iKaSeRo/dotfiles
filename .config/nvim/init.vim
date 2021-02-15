@@ -16,10 +16,24 @@ let g:GPGFilePattern = '\(*.gpg\|*.asc\|*.pgp\|*-*-*.wiki\)'
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
+""" HTML """
+
+autocmd FileType php inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+
+autocmd FileType php inoremap ;l <a<Space>href=""><++></a><Esc>F"i
+
+autocmd FileType php inoremap ;p <p></p> <Enter><Enter><++><Esc>2ki
+autocmd FileType php inoremap ;b <b></b> <Space><++><Esc>FbT>i
+autocmd FileType php inoremap ;s <strong></strong> <Space><++><Esc>FsT>i
+
+
+"""
 set clipboard+=unnamedplus
 
+inoremap  <Esc>:set rightleft<Enter>
+
 set hlsearch
-set termbidi
+"set termbidi
 
 set number
 set relativenumber

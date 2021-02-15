@@ -16,7 +16,7 @@ alias shred='shred -v'
 alias ls='ls -lhN --color=auto --group-directories-first'
 alias la='ls -A'
 
-#alias sudo="doas"
+alias sudo="doas"
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'

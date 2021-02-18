@@ -1,20 +1,27 @@
 let mapleader =" "
 
-" call plug#begin('.local/share/nvim/plugged')
+call plug#begin('.local/share/nvim/plugged')
 " 
 " Plug 'jamessan/vim-gnupg'
-" Plug 'vimwiki/vimwiki'
+ Plug 'vimwiki/vimwiki'
 " Plug 'ap/vim-css-color'
 " 
-" call plug#end()
+call plug#end()
 
 " Auto regenerate diary index
 let g:vimwiki_list = [{'auto_diary_index': 1}]
 " Encrypt vimwiki diary
 let g:GPGFilePattern = '\(*.gpg\|*.asc\|*.pgp\|*-*-*.wiki\)'
 
+" Save file win Esc is hit twice
+map <Esc><Esc> :w<CR>
+
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
+
+"Make new line without entering insert mod
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 
 """ HTML """
 
@@ -33,7 +40,7 @@ set clipboard+=unnamedplus
 inoremap  <Esc>:set rightleft<Enter>
 
 set hlsearch
-"set termbidi
+set termbidi
 
 set number
 set relativenumber
@@ -51,6 +58,9 @@ set splitbelow splitright
 
 " Run xrdb .Xresources every time it's edited
 autocmd BufWritePost *Xresources !xrdb %
+
+"
+map <leader>C :w! \| !gcc "<c-r>%"<CR>
 
 " Luke Smith's compiler script
 map <leader>c :w! \| !compiler "<c-r>%"<CR>

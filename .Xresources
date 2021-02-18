@@ -6,7 +6,7 @@ URxvt*termName: rxvt-unicode-256color
 URxvt*buffered: false
 URxvt*scrollBar: false
 URxvt.intensityStyles: false
-URxvt.font: xft:Inconsolata:size=15,
+URxvt.font: xft:monospace:size=15,
 !	xft:Amiri:size=12,
 !xft:Twitter Emoji Color:size=12, \
 

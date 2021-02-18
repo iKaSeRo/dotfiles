@@ -6,7 +6,7 @@ exec slstatus &
 xwallpaper --zoom ~/.config/wallpaper.jpg 
 xrdb ~/.Xresources
 #xrandr -s 1920x1080 -r 75
-#dunst &
+dunst &
 #mpd &
 
 $HOME/.scripts/remap &

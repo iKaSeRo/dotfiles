@@ -1,8 +1,8 @@
-ISO10646_UCS4_1 = Monospace 15
-U+0600-06FF = Monospace 15
-U+0750-77F = Monospace 15
-U+08A0-8FF = Monospace 15
-U+FB50-FDFF = Monospace 15
-U+FE70-FEFF = Monospace 15
-U+1EE00-1EEFF = Monospace 15
+ISO10646_UCS4_1 = Monospace 17
+U+0600-06FF = Monospace 17
+U+0750-77F = Monospace 17
+U+08A0-8FF = Monospace 17
+U+FB50-FDFF = Monospace 17
+U+FE70-FEFF = Monospace 17
+U+1EE00-1EEFF = Monospace 17
 U+1F000-1F77F = Twitter Color Emoji 15

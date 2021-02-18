@@ -8,3 +8,4 @@ use_anti_alias = true
 type_engine = xft
 cursor_bg_color = #e1e1dcdce9e9
 depth = 32
+alpha = 223

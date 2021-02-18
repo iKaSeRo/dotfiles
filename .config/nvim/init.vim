@@ -19,7 +19,7 @@ map <Esc><Esc> :w<CR>
 nnoremap <F5> "=strftime("%c")<CR>P
 inoremap <F5> <C-R>=strftime("%c")<CR>
 
-"Make new line without entering insert mod
+"Make new line without entering insert mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 

@@ -1,0 +1,10 @@
+fg_color = #e5e5e5e5e5e5
+bg_color = #1c1c18182626
+
+scrollbar_mode = none
+#borderless = true
+fontsize = 15
+use_anti_alias = true
+type_engine = xft
+cursor_bg_color = #e1e1dcdce9e9
+depth = 32

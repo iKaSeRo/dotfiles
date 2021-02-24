@@ -9,7 +9,7 @@ browser linkhandler
 macro , open-in-browser
 macro v set browser "setsid mpv"; open-in-browser ; set browser linkhandler
 macro a set browser "setsid mpv --no-video --force-window" ; open-in-browser ; set browser linkhandler
-macro c set browser "straw-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
+macro c set browser "pipe-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
 macro r set browser "rtv" ; open-in-browser ; set browser linkhandler
 
 bind-key j down

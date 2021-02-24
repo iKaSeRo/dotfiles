@@ -33,6 +33,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 #youtube-dl aliases
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
-alias ytv='straw-viewer'
+alias ytv='pipe-viewer'
 
 alias fish='asciiquarium'

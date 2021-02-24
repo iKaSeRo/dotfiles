@@ -11,7 +11,7 @@ URxvt.font: xft:monospace:size=15,
 !xft:Twitter Emoji Color:size=12, \
 
 !! Extensions
-URxvt.perl-ext-common: default,clipboard,bidi
+URxvt.perl-ext-common: default,clipboard
 URxvt.colorUL: #4682B4
 
 !!! url-select

@@ -5,7 +5,6 @@ export PATH="$PATH:$(du "$HOME/.scripts" | cut -f2 | paste -sd ':' -)"
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-
 #unsetopt PROMPT_SP
 
 # Default programs:
@@ -29,3 +28,4 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export QT_QPA_PLATFORMTHEME="qt5ct"
+export MOZ_ENABLE_WAYLAND=1

@@ -37,7 +37,9 @@ autocmd FileType php inoremap ;s <strong></strong> <Space><++><Esc>FsT>i
 """
 set clipboard+=unnamedplus
 
-inoremap  <Esc>:set rightleft<Enter>
+" Change layout between arabic and english
+noremap <leader>a :set arabic rightleft<CR>
+noremap <leader>e :set noarabic norightleft<CR>
 
 set hlsearch
 set termbidi

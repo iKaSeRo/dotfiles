@@ -9,7 +9,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="sakura -t Sakura-chan"
 export BROWSER="firefox"
 
 # needed for vim-gnupg

@@ -9,7 +9,7 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="sakura -t Sakura-chan"
+export TERMINAL="GDK_BACKEND=x11 sakura -t Sakura-chan"
 export BROWSER="firefox"
 
 # needed for vim-gnupg
@@ -28,4 +28,10 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_FORCE_DPI=physical
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export _JAVA_AWT_WM_NONREPARENTING=1

@@ -117,10 +117,11 @@ input * {
 	bindsym --locked XF86AudioLowerVolume exec amixer set PCM 5%- && pkill -x -RTMIN+11 waybar
 	bindsym --locked XF86AudioRaiseVolume exec amixer set PCM 5%+ && pkill -x -RTMIN+11 waybar
 
-	bindsym --locked XF86AudioNext exec mpc next
-	bindsym --locked XF86AudioPrev exec mpc prev
-	bindsym --locked XF86AudioStop exec mpc stop
-	bindsym --locked XF86AudioPlay exec mpc toggle
+	# MPD
+	bindsym --locked XF86AudioNext exec mpc next && pkill -x -RTMIN+11 waybar
+	bindsym --locked XF86AudioPrev exec mpc prev && pkill -x -RTMIN+11 waybar
+	bindsym --locked XF86AudioStop exec mpc stop && pkill -x -RTMIN+11 waybar
+	bindsym --locked XF86AudioPlay exec mpc toggle && pkill -x -RTMIN+11 waybar
 
 	# Function keys
 	bindsym Print exec slurp | grim -g -

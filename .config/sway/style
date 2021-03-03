@@ -1,0 +1,21 @@
+# MS Window decoration
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #c252ce #c252ce #ffffff #f4cc66   #c252ce 
+client.focused_inactive #524554 #524554 #ffffff #968d78   #524554
+
+# Font
+font pango:Inconsolata 13px
+
+# MS Window rules
+for_window [title="Firefox - Choose User Profile"] floating enable
+for_window [title="tty-clock"] floating enable
+#for_window [title=".* - mpv"] floating enable
+
+# Borders
+default_border pixel 2
+default_floating_border pixel 2
+
+# Gaps
+gaps inner 12
+gaps outer 12

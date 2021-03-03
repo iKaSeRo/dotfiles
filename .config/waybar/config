@@ -1,0 +1,128 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["mpd", "idle_inhibitor", "custom/alsa", "cpu", "memory", "backlight", "sway/language", "clock", "tray"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+"sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent_workspaces": {
+	"1": [],
+	"2": [],
+	"3": [],
+	"4": [],
+	"5": [],
+	"6": [],
+	"7": [],
+	"8": [],
+	"9": []
+    },
+    "format-icons": {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四" ,
+        "5": "五",
+	"6": "六",
+	"7": "七",
+	"8": "八",
+	"9": "九",
+	"10": "十",
+        "urgent": "",
+        "focused": "",
+        "default": ""
+    }
+},
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) {songPosition}  {queueLength}",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "on-click": "$TERMINAL -e tty-clock",
+	"timezones": ["Asia/Riyadh", "Asia/Tokyo"],
+	// "locale": "en_US.UTF-8",
+        "format": "{:%Z %Y-%m-%d (%a) %r }",
+	"interval": 1
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "on-click": "$TERMINAL -e htop",
+        "tooltip": false
+    },
+    "memory": {
+        "on-click": "$TERMINAL -e htop",
+        "format": "{}% "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    // Stolen from https://github.com/Alexays/Waybar/issues/144#issuecomment-492909157
+    "custom/alsa": {
+	"exec": "amixer get PCM | sed -nre 's/.*\\[off\\].*/  muted/p; s/.*\\[(.*%)\\].*/  \\1/p'",
+        "on-click": "amixer set PCM toggle; pkill -x -RTMIN+11 waybar",
+        "on-click-right": "$TERMINAL -e alsamixer -c0",
+        "on-scroll-up": "amixer set PCM 1+; pkill -x -RTMIN+11 waybar",
+        "on-scroll-down": "amixer set PCM 1-; pkill -x -RTMIN+11 waybar",
+        "signal": 11,
+        "interval": 5
+    }
+}

@@ -15,4 +15,4 @@ $HOME/.scripts/remap &
 #
 #setxkbmap -option caps:escape
 
-exec picom
+exec xcompmgr

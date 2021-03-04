@@ -37,4 +37,4 @@ alias ytv='pipe-viewer'
 
 alias fish='asciiquarium'
 
-alias neofetch="neofetch --chafa ~/imgs/neo/em-0.png"
+alias neofetch="neofetch --kitty ~/imgs/neo/em-0.png"

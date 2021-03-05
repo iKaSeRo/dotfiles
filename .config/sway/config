@@ -65,7 +65,7 @@ output * bg ~/Downloads/stalla.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 input * {
-	xkb_layout "us,ar"
+	xkb_layout "us,dvorak,ar"
 	# Change between layouts, and make capslock act like escape
 	xkb_options "grp:shift_toggle,grp_led:scroll,caps:escape"
 	# replace my remap script
@@ -127,7 +127,7 @@ input * {
 	bindsym Print exec slurp | grim -g -
 
 	# Sticky window
-	bindsym $mod+0 sticky enable
+	bindsym $mod+Shift+0 sticky enable
 
 #
 # Moving around:

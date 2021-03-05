@@ -39,3 +39,8 @@ def_key "s"
   show_search_engine
 def_key "x"
   delete_playlist_items
+
+def_key " "
+	select_item
+	scroll_down
+

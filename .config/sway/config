@@ -129,6 +129,10 @@ input * {
 	# Sticky window
 	bindsym $mod+Shift+0 sticky enable
 
+	# Next and previous workspace
+	bindsym $mod+tab workspace next
+	bindsym $mod+Shift+tab workspace prev
+
 #
 # Moving around:
 #

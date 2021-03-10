@@ -25,7 +25,7 @@ set $menu bemenu-run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/stalla.png fill
+output * bg ~/Downloads/lookuppeng.png fill
 
 #
 # Example configuration:
